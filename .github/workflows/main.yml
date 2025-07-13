@@ -20,10 +20,10 @@ jobs:
       run: pip install uv
 
     - name: Install dependencies
-      run: uv pip sync pyproject.toml
+      run: uv pip install --system .[test]
 
     - name: Run tests
-      run: uv run pytest
+      run: pytest
 
   build-and-push-docker:
     needs: build-and-test
