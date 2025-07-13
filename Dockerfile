@@ -14,7 +14,7 @@ RUN pip install uv
 COPY pyproject.toml ./
 
 # Install dependencies
-RUN uv pip sync pyproject.toml
+RUN uv pip sync --system pyproject.toml
 
 # Copy the rest of the application code and set permissions
 COPY --chown=appuser:appuser . .
