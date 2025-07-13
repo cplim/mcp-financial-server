@@ -1,0 +1,14 @@
+[project]
+name = "mcp-financial-server"
+version = "0.1.0"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "httpx",
+    "python-dotenv"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest",
+]
